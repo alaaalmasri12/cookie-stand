@@ -68,7 +68,7 @@ console.log(this.sum2);
         console.log("res",arr);
         return result2;
     },
-    getsoldcookiesinhour: function (min, max, avgcookies) {
+    getsoldcookiesinhour: function () {
         for (var i = 0; i <= open.length; i++) {
             var randomcookieshour = Math.round(Math.floor(((Math.random() * (max - min)) + min)));
             var cookieshour = randomcookieshour * Math.floor(this.avgcookies);
