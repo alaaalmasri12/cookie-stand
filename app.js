@@ -20,7 +20,6 @@ var Seattle =
         return random;
     },
     getsoldcookiesinhour: function (min, max, avgcookies) {
-        var sum = 0;
         for (var i = 0; i <= open.length; i++) {
             var randomcookieshour = Math.round(Math.floor(((Math.random() * (max - min)) + min)));
             var cookieshour = randomcookieshour * Math.floor(this.avgcookies);

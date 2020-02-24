@@ -1,0 +1,61 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    font-family: Arial, 'Verdana', or Helvetica
+
+}
+header{
+    margin: 4%;
+}
+.main-nav ul
+{
+    list-style-type: none;
+}
+.main-nav ul li {
+    display: inline-block;
+    padding: 25px;
+}
+.main-nav ul li a
+{
+    font-weight: 300;
+    color: #000000;
+    font-style: italic;
+}
+
+.main-nav ul li a
+{
+text-decoration: none;
+}
+.active
+{
+    color:#efdde7 !important;
+}
+.main-nav ul li a:hover
+{
+    color:#efdde7;
+}
+.logo img
+{
+    width: 20%;
+}
+ion-icon
+{
+    font-size: 25px;
+}
+.salmon {
+    width: 20%;
+    padding-left: 9%;
+    position: relative;
+    bottom: 19px;
+    display: inline-block;
+}
+.main-nav
+{
+    display:inline-flex;
+}
+.navbar-second-part {
+    position: relative;
+    bottom: -2px;
+}
