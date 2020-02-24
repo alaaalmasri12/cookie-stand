@@ -78,6 +78,7 @@ var Tokyo =
         console.log(random);
         return random;
     }
+    //
     ,
     getsoldcookiesinhour: function (min, max, avgcookies) {
         for (var i = 0; i <= open.length; i++) {
