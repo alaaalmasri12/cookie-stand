@@ -44,7 +44,6 @@ console.log(cont);
         li.textContent =`${hours[i]}:${arr[i]} cookies`;
     console.log(li);
     }
-<<<<<<< HEAD
     var li1 = document.createElement('li');
     ul.appendChild(li1);
     li1.textContent =`total ${this.sum} cookies`;
@@ -64,8 +63,7 @@ var Tokyo = {
        this.sum2=Math.ceil(this.sum2+result2);
 console.log(this.sum2);
             arr2.push(Math.floor(result2));
-=======
-    //
+
     ,
     getsoldcookiesinhour: function (min, max, avgcookies) {
         for (var i = 0; i <= open.length; i++) {
@@ -74,7 +72,6 @@ console.log(this.sum2);
             this.cookies[i] = cookieshour;
             this.totalCookies += randomcookieshour;
             console.log(cookieshour);
->>>>>>> classs06-objects
             
         }
         console.log("res",arr);
