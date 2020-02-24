@@ -6,15 +6,15 @@ var Seattle =
     cookies: [],
     totalCookiesSoldHour: [],
     storeLocation: 'Seattle',
-    minimumGuests: 23,
-    maximumGuests: 65,
+    max: 23,
+    min: 65,
     random: 0,
     totalCookies: 0,
     avgcookies: 6.3,
     Location :['Seattle'] ,
     range: this.maximumGuests - this.minimumGuests,
     random: function (min, max) {
-        var random = Math.round(Math.floor(((Math.random() * (max - min) + this.min))));
+        var random = Math.round(Math.floor(((Math.random() * (this.max - this.min) + this.min))));
         console.log(random);
         return random;
     },
@@ -22,9 +22,9 @@ var Seattle =
         var sum = 0;
         for (var i = 0; i <= open.length; i++) {
             var randomcookieshour = Math.round(Math.floor(((Math.random() * (max - min)) + min)));
-            var cookieshour = randomcookieshour * avgcookies;
+            var cookieshour = randomcookieshour * Math.floor(this.avgcookies);
             this.cookies[i] = cookieshour;
-            sum += randomcookieshour;
+            this.totalCookies += randomcookieshour;
             console.log(cookieshour);
             
         }
@@ -48,14 +48,10 @@ var Seattle =
           
            
         }
-        for(var i=0;i<=open.length;i++)
-        {
-            var sum=0;
-            sum+=this.cookies[i];
-            return this.cookies;
+        var liE2 = document.createElement('li');
+        ulE1.appendChild(liE2);
 
-        }
-        liE1.textContent=`Total ${sum} cookies`;
+        liE1.textContent=`Total ${this.totalCookies} cookies`;
 
         console.log(container);
         } 
