@@ -14,6 +14,7 @@ var Seattle =
     Location :['Seattle'] ,
     range: this.maximumGuests - this.minimumGuests,
     random: function (min, max) {
+
         var random = Math.round(Math.floor(((Math.random() * (this.max - this.min) + this.min))));
         console.log(random);
         return random;
@@ -35,9 +36,14 @@ var Seattle =
  
     rander: function () {
         var textContent ;
-        var container = document.getElementById("seatel");
+        var container = document.getElementById("location");
         var articleE = document.createElement('article');
         container.appendChild(articleE);
+
+        var ulE4 = document.createElement('h1');
+        ulE4.textContent=this.storeLocation;
+
+        articleE.appendChild(ulE4);
         var ulE1 = document.createElement('ul');
         articleE.appendChild(ulE1);
         for(var i =0; i<open.length ; i++) {
@@ -80,7 +86,34 @@ var Tokyo =
             var cookieshour = randomcookieshour * avgcookies;
             return cookieshour;
         }
-    }
+    },
+    rander: function () {
+        var textContent ;
+        var container = document.getElementById("location");
+        var articleE = document.createElement('article');
+        container.appendChild(articleE);
+
+        var ulE4 = document.createElement('h1');
+        ulE4.textContent=this.storeLocation;
+
+        articleE.appendChild(ulE4);
+        var ulE1 = document.createElement('ul');
+        articleE.appendChild(ulE1);
+        for(var i =0; i<open.length ; i++) {
+           var liE1 = document.createElement('li');
+           
+           ulE1.appendChild(liE1);
+           liE1.textContent =`${open[i]  } ${  this.cookies[i]    } cookies`;
+          
+           
+        }
+        var liE2 = document.createElement('li');
+        ulE1.appendChild(liE2);
+
+        liE1.textContent=`Total ${this.totalCookies} cookies`;
+
+        console.log(container);
+        } 
 }
 var Dubai =
 {
@@ -103,7 +136,34 @@ var Dubai =
             var cookieshour = randomcookieshour * avgcookies;
             return cookieshour;
         }
-    }
+    },
+    rander: function () {
+        var textContent ;
+        var container = document.getElementById("location");
+        var articleE = document.createElement('article');
+        container.appendChild(articleE);
+
+        var ulE4 = document.createElement('h1');
+        ulE4.textContent=this.storeLocation;
+
+        articleE.appendChild(ulE4);
+        var ulE1 = document.createElement('ul');
+        articleE.appendChild(ulE1);
+        for(var i =0; i<open.length ; i++) {
+           var liE1 = document.createElement('li');
+           
+           ulE1.appendChild(liE1);
+           liE1.textContent =`${open[i]  } ${  this.cookies[i]    } cookies`;
+          
+           
+        }
+        var liE2 = document.createElement('li');
+        ulE1.appendChild(liE2);
+
+        liE1.textContent=`Total ${this.totalCookies} cookies`;
+
+        console.log(container);
+        } 
 }
 var Paris =
 {
@@ -125,7 +185,35 @@ var Paris =
         var cookieshour = randomcookieshour * avgcookies;
         console.log(cookieshour);
         return cookieshour
-    }
+    },
+    rander: function () {
+        var textContent ;
+        var container = document.getElementById("location");
+        var articleE = document.createElement('article');
+        container.appendChild(articleE);
+
+        var ulE4 = document.createElement('h1');
+        ulE4.textContent=this.storeLocation;
+
+        articleE.appendChild(ulE4);
+        var ulE1 = document.createElement('ul');
+        articleE.appendChild(ulE1);
+        for(var i =0; i<open.length ; i++) {
+           var liE1 = document.createElement('li');
+           
+           ulE1.appendChild(liE1);
+           liE1.textContent =`${open[i]  } ${  this.cookies[i]    } cookies`;
+          
+           
+        }
+        var liE2 = document.createElement('li');
+        ulE1.appendChild(liE2);
+
+        liE1.textContent=`Total ${this.totalCookies} cookies`;
+
+        console.log(container);
+        }
+    
 }
 var Lima =
 {
@@ -148,7 +236,34 @@ var Lima =
         var cookieshour = randomcookieshour * avgcookies;
         console.log(cookieshour);
         return cookieshour
-    }
+    },
+    rander: function () {
+        var textContent ;
+        var container = document.getElementById("location");
+        var articleE = document.createElement('article');
+        container.appendChild(articleE);
+
+        var ulE4 = document.createElement('h1');
+        ulE4.textContent=this.storeLocation;
+
+        articleE.appendChild(ulE4);
+        var ulE1 = document.createElement('ul');
+        articleE.appendChild(ulE1);
+        for(var i =0; i<open.length ; i++) {
+           var liE1 = document.createElement('li');
+           
+           ulE1.appendChild(liE1);
+           liE1.textContent =`${open[i]  } ${  this.cookies[i]    } cookies`;
+          
+           
+        }
+        var liE2 = document.createElement('li');
+        ulE1.appendChild(liE2);
+
+        liE1.textContent=`Total ${this.totalCookies} cookies`;
+
+        console.log(container);
+        }
 }
 
 console.log('Location :' + Seattle.Location);
@@ -165,3 +280,7 @@ Seattle.getsoldcookiesinhour(23, 65, 6.3);
 // store4.getsoldcookiesinhour(20,38,2.3);
 // store5.getsoldcookiesinhour(2,16,4.6);
 Seattle.rander();
+Tokyo.rander();
+Dubai.rander();
+Paris.rander();
+Lima.rander();
