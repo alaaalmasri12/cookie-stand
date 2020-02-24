@@ -8,7 +8,6 @@ var Seattle =
     storeLocation: 'Seattle',
     max: 23,
     min: 65,
-    random: 0,
     totalCookies: 0,
     avgcookies: 6.3,
     Location :['Seattle'] ,
@@ -22,6 +21,7 @@ var Seattle =
     getsoldcookiesinhour: function (min, max, avgcookies) {
         for (var i = 0; i <= open.length; i++) {
             var randomcookieshour = Math.round(Math.floor(((Math.random() * (max - min)) + min)));
+            console.log(randomcookieshour);
             var cookieshour = randomcookieshour * Math.floor(this.avgcookies);
             this.cookies[i] = cookieshour;
             this.totalCookies += randomcookieshour;
