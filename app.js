@@ -75,7 +75,7 @@ var Tokyo =
     avgcookies: 1.2,
     range: this.maximumGuests - this.minimumGuests,
     random: function (min, max) {
-        var random = Math.round(Math.floor(((Math.random() * (max - min) + min))));
+        var random = Math.round(Math.floor(((Math.random() * (this.max - this.min) + this.min))));
         console.log(random);
         return random;
     }
@@ -83,8 +83,11 @@ var Tokyo =
     getsoldcookiesinhour: function (min, max, avgcookies) {
         for (var i = 0; i <= open.length; i++) {
             var randomcookieshour = Math.round(Math.floor(((Math.random() * (max - min)) + min)));
-            var cookieshour = randomcookieshour * avgcookies;
-            return cookieshour;
+            var cookieshour = randomcookieshour * Math.floor(this.avgcookies);
+            this.cookies[i] = cookieshour;
+            this.totalCookies += randomcookieshour;
+            console.log(cookieshour);
+            
         }
     },
     rander: function () {
@@ -126,15 +129,18 @@ var Dubai =
     avgcookies: 3.7,
     range: this.maximumGuests - this.minimumGuests,
     random: function (min, max) {
-        var random = Math.round(Math.floor(((Math.random() * (max - min) + min))));
+        var random = Math.round(Math.floor(((Math.random() * (this.max - this.min) + this.min))));
         console.log(random);
         return random;
     },
     getsoldcookiesinhour: function (min, max, avgcookies) {
         for (var i = 0; i <= open.length; i++) {
             var randomcookieshour = Math.round(Math.floor(((Math.random() * (max - min)) + min)));
-            var cookieshour = randomcookieshour * avgcookies;
-            return cookieshour;
+            var cookieshour = randomcookieshour * Math.floor(this.avgcookies);
+            this.cookies[i] = cookieshour;
+            this.totalCookies += randomcookieshour;
+            console.log(cookieshour);
+            
         }
     },
     rander: function () {
@@ -176,15 +182,19 @@ var Paris =
     avgcookies: 2.3,
     range: this.maximumGuests - this.minimumGuests,
     random: function (min, max) {
-        var random = Math.floor(Math.random()* (max-min+1) + min); ;
+        var random = Math.floor(Math.random()* (this.max-this.min+1) + this.min); ;
         console.log(random);
         return random;
     },
     getsoldcookiesinhour: function (min, max, avgcookies) {
-        var randomcookieshour = Math.floor(Math.random()* (max-min+1) + min) ;
-        var cookieshour = randomcookieshour * avgcookies;
-        console.log(cookieshour);
-        return cookieshour
+        for (var i = 0; i <= open.length; i++) {
+            var randomcookieshour = Math.round(Math.floor(((Math.random() * (max - min)) + min)));
+            var cookieshour = randomcookieshour * Math.floor(this.avgcookies);
+            this.cookies[i] = cookieshour;
+            this.totalCookies += randomcookieshour;
+            console.log(cookieshour);
+            
+        }
     },
     rander: function () {
         var textContent ;
@@ -226,16 +236,20 @@ var Lima =
     avgcookies: 4.6,
     range: this.maximumGuests - this.minimumGuests,
     random: function (min, max) {
-        var random = Math.round(Math.floor(((Math.random() * (max - min) + min))));
+
+        var random = Math.round(Math.floor(((Math.random() * (this.max - this.min) + this.min))));
         console.log(random);
         return random;
-    }
-    ,
+    },
     getsoldcookiesinhour: function (min, max, avgcookies) {
-        var randomcookieshour = Math.floor(Math.random()* (max-min+1) + min); 
-        var cookieshour = randomcookieshour * avgcookies;
-        console.log(cookieshour);
-        return cookieshour
+        for (var i = 0; i <= open.length; i++) {
+            var randomcookieshour = Math.round(Math.floor(((Math.random() * (max - min)) + min)));
+            var cookieshour = randomcookieshour * Math.floor(this.avgcookies);
+            this.cookies[i] = cookieshour;
+            this.totalCookies += randomcookieshour;
+            console.log(cookieshour);
+            
+        }
     },
     rander: function () {
         var textContent ;
@@ -275,10 +289,10 @@ console.log('Location :' + Seattle.Location);
  Dubai.random(20,38);
  Lima.random(2,16);
 Seattle.getsoldcookiesinhour(23, 65, 6.3);
-// store2.getsoldcookiesinhour(3,24,1.2);
-// store3.getsoldcookiesinhour(11,38,3.7);
-// store4.getsoldcookiesinhour(20,38,2.3);
-// store5.getsoldcookiesinhour(2,16,4.6);
+Tokyo.getsoldcookiesinhour(3,24,1.2);
+Dubai.getsoldcookiesinhour(11,38,3.7);
+Paris.getsoldcookiesinhour(20,38,2.3);
+Lima.getsoldcookiesinhour(2,16,4.6);
 Seattle.rander();
 Tokyo.rander();
 Dubai.rander();
