@@ -64,7 +64,10 @@ var Tokyo = {
 console.log(this.sum2);
             arr2.push(Math.floor(result2));
 
-    ,
+        }
+        console.log("res",arr);
+        return result2;
+    },
     getsoldcookiesinhour: function (min, max, avgcookies) {
         for (var i = 0; i <= open.length; i++) {
             var randomcookieshour = Math.round(Math.floor(((Math.random() * (max - min)) + min)));
@@ -74,8 +77,7 @@ console.log(this.sum2);
             console.log(cookieshour);
             
         }
-        console.log("res",arr);
-        return random2;
+        
     },
 render:function(){
     var cont = document.getElementById('cookies');
@@ -118,7 +120,7 @@ console.log(this.sum3);
             
         }
         console.log("res",arr);
-        return random3;
+        return result3;
     },
 render:function(){
     var cont = document.getElementById('cookies');
@@ -161,7 +163,7 @@ console.log(this.sum4);
             
         }
         console.log("res",arr);
-        return random4;
+        return result4;
     },
 render:function(){
     var cont = document.getElementById('cookies');
@@ -204,7 +206,7 @@ console.log(this.sum5);
             
         }
         console.log("res",arr);
-        return random5;
+        return result5;
     },
 render:function(){
     var cont = document.getElementById('cookies');
