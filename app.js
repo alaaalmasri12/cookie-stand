@@ -43,44 +43,32 @@ CookieStore.prototype.cookiesPerHr=function()
 
 
 
-CookieStore.prototype.render=function()
+function makerow()
 {
+    console.log("opend the the function");
     var cont = document.getElementById('cookies-sold');
-    var h2 =document.createElement('h2');
-    console.log(h2);
-    cont.appendChild(h2);
-    var h3=document.createElement('h3');    
-    cont.appendChild(h3);
-    h3.textContent= this.storeLocation;
-    console.log("h3",h3);
-console.log(cont);
-    var ul = document.createElement('ul');
-    console.log(ul);
-    cont.appendChild(ul);
-    for(var i =0; i<hours.length ; i++) {
-        var li = document.createElement('li');
-      ul.appendChild(li);
-        li.textContent =`${hours[i]}:${this.cookiesPerHr()} cookies`;
-    console.log(li);
+    var tableE1 = document.createElement('table');
+    cont.appendChild(tableE1);
+    // var thead=document.createElement("thead");
+    // tableE1.appendChild(thead);
+    var firstrow = document.createElement('tr');
+    tableE1.appendChild(firstrow);
+    for(var i=0;i<=open.length;i++)
+    {
+    var firstheader = document.createElement('th');
+    firstrow.appendChild(firstheader);
+    firstheader.textContent=hours[i];
+    console.log(firstheader);
+    
     }
-    var li1 = document.createElement('li');
-    ul.appendChild(li1);
-    li1.textContent =`total ${this.sum} cookies`;
-}
 
-
-
+    }
+    makerow();
 var Seattle=new CookieStore("Seattle",23,65,6.3);
  var Tokyo=new CookieStore("Tokyo",3,24,1.2);
  var Dubai=new CookieStore("Dubai",11,38,3.7);
  var Paris=new CookieStore("Paris",20,38,2.3);
  var Lima=new CookieStore("Lima",16,2,4.6);
- for (var i =0; i< CookieStores.length; i++) {
-    CookieStores[i].cookiesPerHr();
-    CookieStores[i].render();
-
-
-  }
  Seattle.custrandom();
  Seattle.cookiesPerHr();
 
