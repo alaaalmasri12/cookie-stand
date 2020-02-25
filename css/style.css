@@ -59,13 +59,24 @@ ion-icon
     position: relative;
     bottom: -2px;
 }
-.table1
+
+.hours
 {
     margin: 80px;
+    padding: 10px;
+
+}
+.hours th
+{
+    padding: 10px;
+}
+
+.table1
+{
     border: 1px solid #dee2e6;
 }
 
-.table1 {
+.table {
     width: 80%;
     margin-bottom: 1rem;
     color: #212529;
