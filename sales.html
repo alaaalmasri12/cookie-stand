@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+<style>
+    body
+    {
+       background-color: skyblue; 
+    }
+</style>
 <body>
-    <div id='cookies'></div>
-  
+    <form id="sales-form">
+    <fieldset>
+        <legend>Sales Information </legend>
+        <label for="Store">Store Name</label>
+        <input type="text" id="Store">
+        <br>
+        <label for="minGuest">Minumum Guest</label>
+        <input type="number" id="minGuest" placeholder="enter minimum guest">
+        <br>
+        <label for="maxguest">Max Guest</label>
+        <input type="text" id="maxguest" placeholder="enter maxguest ">
+        <br>
+        <label for="avgcookies">Avg cookies</label>
+
+        <input type="number" id="avgcookies" placeholder="enter your avg">
+        <br>
+        <input type="submit" value="add store" >
+
+    </fieldset>
+<form>
+    <div id='cookies-sold'></div>
+    
     <script src="app.js"></script>
 </body>
 </html>
