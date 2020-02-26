@@ -32,7 +32,7 @@ CookieStore.prototype.custrandom = function () {
 
         this.sum=this.sum+cookienumber;
         this.total.push(this.sum)
-        this.totalstore=this.totalstore+this.randomResult[i];;
+        this.totalstore=this.randomResult[i]+this.randomResult[i];
         totalstoreslocation.push(this.totalstore);
         console.log(this.sum,);
         console.log(this.totalstoreslocation,'total for each store');
@@ -65,6 +65,7 @@ function header() {
    
     
     tableE1.border = '2';
+    tableE1.classList.add("table1");
 }
 CookieStore.prototype.maintable = function (k) {
     this.custrandom();

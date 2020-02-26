@@ -71,16 +71,12 @@ ion-icon
     padding: 10px;
 }
 
-.table1
-{
-    border: 1px solid #dee2e6;
-}
 
-.table {
-    width: 80%;
-    margin-bottom: 1rem;
+
+.table1 {
+    width: 100%;
     color: #212529;
-    border-collapse: collapse;
+    margin: 5% auto;
 }
 tr {
     display: table-row;
