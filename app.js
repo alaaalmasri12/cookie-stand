@@ -2,6 +2,8 @@
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 // var random=0;
 var CookieStores = [];
+var totalstoreslocation=[];
+
 
 var div = document.getElementById("cookies-sold");
 var tableE1 = document.createElement("table");
@@ -9,49 +11,42 @@ div.appendChild(tableE1);
 header();
 var CookieStore = function (storeLocation, minimumGuests, maximumGuests, avgcookies, sum) {
     this.randomResult = [];
+    this.total=[];
+    this.totalstore=0;
     this.storeLocation = storeLocation;
     this.minimumGuests = minimumGuests;
     this.maximumGuests = maximumGuests;
     this.customernumber = [];
-    this.totalCookies = 0;
+    this.sum=0;
     this.avgcookies = avgcookies;
-    this.sum = 0;
     CookieStores.push(this);
     console.log('shops array', CookieStores);
 
 
 }
 CookieStore.prototype.custrandom = function () {
-    for (var i = 0; i < hours.length; i++) {
+    for (var i = 0; i <hours.length-1; i++) {
         this.customernumber = Math.floor(Math.random() * (this.maximumGuests - this.minimumGuests) + this.minimumGuests);
         var cookienumber = Math.floor(this.customernumber * this.avgcookies);
-        this.cookienumber=this.totalCookies+cookienumber;
-        //   this.numberofcookies[i]+=this.customernumber;
-        console.log(cookienumber,'sim of');
         this.randomResult.push(cookienumber);
-        console.log(this.customernumber, 'array');
-        console.log('ytytyty',this.randomResults)
+
+        this.sum=this.sum+cookienumber;
+        this.total.push(this.sum)
+        this.totalstore=this.totalstore+this.randomResult[i];;
+        totalstoreslocation.push(this.totalstore);
+        console.log(this.sum,);
+        console.log(this.totalstoreslocation,'total for each store');
+        console.log(this.sum);
+       
+     
+        // this.cookienumber=this.totalCookies+cookienumber;
+
     }
-    return this.randomResult;
-
-
+    return this.randomResult,this.total,this.totalstoreslocation;
 }
+
 function header() {
-    // console.log("opend the the function");
-    // var cont = document.getElementById('cookies-sold');
-    // tableE1.classList.add("hours");
-    // cont.appendChild(tableE1);
-    // var firstrow = document.createElement('tr');
-    // tableE1.appendChild(firstrow);
-    // var tbody=document.createElement("tbody");
-    // tableE1.appendChild(tbody);
-    // for(var i=0;i<=hours.length;i++)
-    // {
-    // var firstheader = document.createElement('th');
-    // firstrow.appendChild(firstheader);
-    // firstheader.textContent=hours[i];
-    // console.log(firstheader);
-    // }
+
     var tr = document.createElement("tr");
     tableE1.appendChild(tr);
     var firstcell = document.createElement("th");
@@ -73,9 +68,6 @@ function header() {
 }
 CookieStore.prototype.maintable = function (k) {
     this.custrandom();
-    // var tbody=document.createElement("tbody");
-    // tableE1.appendChild(tbody);
-
     var tabletr = document.createElement("tr");
     tableE1.appendChild(tabletr);
     var th = document.createElement("td");
@@ -83,13 +75,17 @@ CookieStore.prototype.maintable = function (k) {
     th.textContent = CookieStores[k].storeLocation;
     for (var j = 0; j < 14; j++) {
         var tdex1 = document.createElement("td");
-        console.log(tdex1);
         tabletr.appendChild(tdex1);
         tdex1.textContent =this.randomResult[j];
     }
-    var tdtotal = document.createElement("td");
+   
+        var tdtotal = document.createElement("td");
         tabletr.appendChild(tdtotal);
-        tdtotal.textContent=this.cookienumber;
+        for(var k=0;k<=hours.length;k++)
+        {
+        tdtotal.textContent=this.total[k];
+    }
+  
 
 }
 
@@ -106,7 +102,7 @@ function footer() {
     {
         var td1=document.createElement("td");
         f1.appendChild(td1);
-        td1.textContent='asdasd';
+        td1.textContent=totalstoreslocation[i];
     }
     
     
@@ -121,6 +117,7 @@ for (var i = 0; i < CookieStores.length; i++) {
  
     CookieStores[i].custrandom();
     CookieStores[i].maintable(i);
+    
 }
 footer();
 console.log('this is cookies: ' , CookieStores);
