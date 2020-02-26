@@ -25,7 +25,7 @@ var CookieStore = function (storeLocation, minimumGuests, maximumGuests, avgcook
 
 }
 CookieStore.prototype.custrandom = function () {
-    for (var i = 0; i <hours.length-1; i++) {
+    for (var i = 0; i <hours.length; i++) {
         this.customernumber = Math.floor(Math.random() * (this.maximumGuests - this.minimumGuests) + this.minimumGuests);
         var cookienumber = Math.floor(this.customernumber * this.avgcookies);
         this.randomResult.push(cookienumber);
