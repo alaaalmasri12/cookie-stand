@@ -120,6 +120,6 @@ for (var i = 0; i < CookieStores.length; i++) {
     CookieStores[i].maintable(i);
     
 }
-//this is a footer
+//this is a footersa
 footer();
 console.log('this is cookies: ' , CookieStores);
