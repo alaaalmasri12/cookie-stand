@@ -16,7 +16,6 @@ var CookieStore = function (storeLocation, minimumGuests, maximumGuests, avgcook
     //this.totalstore=0;
     //this.customernumber = [];
     CookieStores.push(this);
-    console.log('shops array', CookieStores);
 
 
 }
@@ -80,6 +79,8 @@ CookieStore.prototype.maintable = function (k) {
 
 
 
+
+
 function footer() {
     
     var total=0;
@@ -89,7 +90,6 @@ function footer() {
     var td=document.createElement("td");
     lastrow.appendChild(td);
     td.textContent="total";
-    console.log("sadasd");
     for(var count=0;count<hours.length;count++)
     {
         var td1=document.createElement("td");
@@ -120,5 +120,36 @@ for (var i = 0; i < CookieStores.length; i++) {
     CookieStores[i].maintable(i);
     
 }
-footer();
-console.log('this is cookies: ' , CookieStores);
+
+var Sales=document.getElementById("sales-form");
+Sales.addEventListener("submit",function(event)
+{
+    event.preventDefault();
+console.log(CookieStores);
+var storeLocation=event.target.Store.value;
+var minGuest=event.target.minGuest.value;
+var maxguest=event.target.maxguest.value;
+var avgCookies=event.target.avgcookies.value;
+parseFloat(parseFloat);
+if(storeLocation == '')
+{
+    alert("you must fill the name");
+}
+else if(minGuest>maxguest)
+{
+    alert("the min should not be larget than the max");
+}
+else if(minGuest<-1 || maxguest<-1 || avgCookies<-1)
+{
+    alert("number should be larger than -1");
+}
+else
+{
+    var store=new CookieStore(storeLocation,minGuest,maxguest,avgCookies);
+    store.custrandom();
+    store.maintable(i);
+    footer();
+    alert("everything has been iserted inside an object");
+
+}
+});
