@@ -12,6 +12,7 @@ var CookieStore = function (storeLocation, minimumGuests, maximumGuests, avgcook
     this.avgcookies = avgcookies;
     this.randomResult = [];//array that will hold random value
     this.sum=0;
+    this.lastindex=CookieStores.length;
     //this.total=[];
     //this.totalstore=0;
     //this.customernumber = [];
@@ -81,8 +82,47 @@ CookieStore.prototype.maintable = function (k) {
 
 
 
-function footer() {
+CookieStore.prototype.addrow = function () {
+    this.custrandom();
+    var tabletr = document.createElement("tr");
+    tableE1.appendChild(tabletr);
+    var th = document.createElement("td");
+    tabletr.appendChild(th);
+        
+        th.textContent=CookieStores[this.lastindex].storeLocation;
+        for (var j = 0; j < hours.length; j++) {
+            var tdex1 = document.createElement("td");
+            tabletr.appendChild(tdex1);
+            tdex1.textContent =this.randomResult[j];
+        }
+       
+            var tdtotal = document.createElement("td");
+            tabletr.appendChild(tdtotal);
+            for(var k=0;k<=hours.length;k++)
+            {
+            tdtotal.textContent=this.sum;
+        }
     
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function footer() {
+
     var total=0;
     var res=0;
     var lastrow=document.createElement("tr");
@@ -103,11 +143,11 @@ function footer() {
         td1.textContent=total;
         res=total+res;
     }
-
     var res1=document.createElement("td");
     lastrow.appendChild(res1);
     res1.textContent=res;
     var td7=document.createElement("td");
+    
 }
 var Seattle = new CookieStore("Seattle", 23, 65, 6.3);
 var Tokyo = new CookieStore("Tokyo", 3, 24, 1.2);
@@ -146,14 +186,17 @@ else if(minGuest<-1 || maxguest<-1 || avgCookies<-1)
 else
 {
     var store=new CookieStore(storeLocation,minGuest,maxguest,avgCookies);
-    store.custrandom();
-    store.maintable(i);
+        store.custrandom();
+        //store.maintable(i);
+        store.addrow();
+
+
+    
+   
     footer();
+
     alert("everything has been iserted inside an object");
 
+
 }
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> master
