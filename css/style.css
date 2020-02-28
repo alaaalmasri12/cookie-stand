@@ -114,33 +114,3 @@ tr {
     height: 200px;
     border-radius: 50%;
 }
-.form {
-    margin: 80px 42px;
-}
-fieldset
-{
-    text-align: center;
-    padding: 50px;
-}
-label
-{
-    margin-right: 30px;
-}
-input
-{
-    width: 200px;
-    margin-top: 20px;
-}
-
-#minGuest {
-    position: relative;
-    right: 14px;
-}
-#maxguest {
-    position: relative;
-    left: 7px;
-}
-#avgcookies {
-    position: relative;
-    left: 5px;
-}
