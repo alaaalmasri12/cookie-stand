@@ -152,4 +152,8 @@ else
     alert("everything has been iserted inside an object");
 
 }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> master
