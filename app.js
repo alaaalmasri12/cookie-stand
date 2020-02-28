@@ -120,5 +120,6 @@ for (var i = 0; i < CookieStores.length; i++) {
     CookieStores[i].maintable(i);
     
 }
+//this is a footer
 footer();
 console.log('this is cookies: ' , CookieStores);
