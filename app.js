@@ -148,10 +148,13 @@ function footer() {
     res1.textContent=res;
     var td7=document.createElement("td");
     
+<<<<<<< HEAD
 
 
     
     
+=======
+>>>>>>> class09-forms
 }
 var Seattle = new CookieStore("Seattle", 23, 65, 6.3);
 var Tokyo = new CookieStore("Tokyo", 3, 24, 1.2);
@@ -203,5 +206,4 @@ else
 
 
 }
-});
 });
