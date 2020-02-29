@@ -189,9 +189,6 @@ else
         store.custrandom();
         //store.maintable(i);
         store.addrow();
-
-
-    
    
     footer();
 
