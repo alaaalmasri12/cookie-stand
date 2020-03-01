@@ -9,6 +9,10 @@ body
 header{
     margin: 4%;
 }
+.store-name
+{
+    color: red;
+}
 .main-nav ul
 {
     list-style-type: none;

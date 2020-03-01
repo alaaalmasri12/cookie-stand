@@ -13,9 +13,7 @@ var CookieStore = function (storeLocation, minimumGuests, maximumGuests, avgcook
     this.randomResult = [];//array that will hold random value
     this.sum=0;
     this.lastindex=CookieStores.length;
-    //this.total=[];
-    //this.totalstore=0;
-    //this.customernumber = [];
+   
     CookieStores.push(this);
 
 
@@ -148,10 +146,14 @@ function footer() {
     res1.textContent=res;
     var td7=document.createElement("td");
     
+<<<<<<< HEAD
 
 
     
     
+=======
+
+>>>>>>> ea0c502a34d0c7096d5a9e3c62ab7ab6546572c7
 }
 var Seattle = new CookieStore("Seattle", 23, 65, 6.3);
 var Tokyo = new CookieStore("Tokyo", 3, 24, 1.2);
