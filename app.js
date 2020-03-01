@@ -197,7 +197,6 @@ else
         //store.maintable(i);
         store.addrow();
         footer();
-   
            
                 tableE1.deleteRow(CookieStores.length-1);
 
@@ -206,8 +205,4 @@ else
 
 
 }
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> class09-forms
