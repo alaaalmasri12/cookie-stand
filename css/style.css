@@ -27,6 +27,10 @@ header{
     color: #000000;
     font-style: italic;
 }
+.store-name
+{
+    color: red;
+}
 
 .main-nav ul li a
 {
