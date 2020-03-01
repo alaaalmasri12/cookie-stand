@@ -148,10 +148,6 @@ function footer() {
     res1.textContent=res;
     var td7=document.createElement("td");
     
-
-
-    
-    
 }
 var Seattle = new CookieStore("Seattle", 23, 65, 6.3);
 var Tokyo = new CookieStore("Tokyo", 3, 24, 1.2);
@@ -193,15 +189,14 @@ else
         store.custrandom();
         //store.maintable(i);
         store.addrow();
-        footer();
-   
-           
-                tableE1.deleteRow(CookieStores.length-1);
 
+
+    
+   
+    footer();
 
     alert("everything has been iserted inside an object");
 
 
 }
-    //
 });
